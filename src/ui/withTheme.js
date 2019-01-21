@@ -2,7 +2,7 @@ import React from 'react';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
-const SPACING_UNIT = 16;
+const SPACING_UNIT = 24;
 
 const theme = createMuiTheme({
   palette: {
@@ -44,6 +44,9 @@ const theme = createMuiTheme({
       alignItems: 'center',
       display: 'flex',
       justifyContent: 'center',
+    },
+    paper: {
+      padding: SPACING_UNIT,
     },
   },
 });

@@ -2,11 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import 'typeface-roboto'; // eslint-disable-line
-import AppContainer from './ui/home/AppContainer';
+import AppContainer from './ui/app/AppContainer';
 import * as serviceWorker from './serviceWorker';
 
+import apiManager from './app-init/apiManager';
 import store from './state/store';
 import './index.css';
+
+apiManager(store);
 
 ReactDOM.render(
   <Provider store={store}>
