@@ -1,15 +1,19 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+
+import { matchRoute, routes, ROUTE_404 } from 'app-init/routedir';
+
 import Routes from './Routes';
 
 export const mapDispatchToProps = dispatch => ({
   notifyChangeRoute: (newloc) => {
+    const match = matchRoute(routes, newloc.pathname);
     dispatch({
       type: 'router/notify-change',
       payload: {
         location: { ...newloc },
-        route: { name: newloc.pathname.slice(1) },
-        params: {},
+        route: { name: match.route.name || ROUTE_404 },
+        params: match.params || {},
         searchParams: {},
       },
     });
