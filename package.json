@@ -6,6 +6,7 @@
     "@babel/core": "7.1.0",
     "@entando/apimanager": "^2.2.0",
     "@entando/router": "^1.1.2",
+    "@entando/utils": "^1.1.0",
     "@material-ui/core": "^3.6.0",
     "@material-ui/icons": "^3.0.1",
     "@svgr/webpack": "2.4.1",
