@@ -6,6 +6,11 @@ import PageLoader from 'ui/components/loader/PageLoader';
 import HomeIcon from '@material-ui/icons/Home';
 import AboutIcon from '@material-ui/icons/SpeakerNotes';
 import GalleryIcon from '@material-ui/icons/Collections';
+import {
+  PATH_HOME,
+  PATH_ABOUT,
+  PATH_GALLERY,
+} from 'app-init/routedir';
 
 const PageHome = Loadable({
   loader: () => import(/* webpackChunkName: "home" */'ui/pages/HomeContainer'),
@@ -23,9 +28,9 @@ const PageGallery = Loadable({
 });
 
 export const menuItems = [
-  { label: 'Home', url: '/', icon: <HomeIcon /> },
-  { label: 'About', url: '/about', icon: <AboutIcon /> },
-  { label: 'Gallery', url: '/gallery', icon: <GalleryIcon /> },
+  { label: 'Home', url: PATH_HOME, icon: <HomeIcon /> },
+  { label: 'About', url: PATH_ABOUT, icon: <AboutIcon /> },
+  { label: 'Gallery', url: PATH_GALLERY, icon: <GalleryIcon /> },
 ];
 
 class Routes extends Component {

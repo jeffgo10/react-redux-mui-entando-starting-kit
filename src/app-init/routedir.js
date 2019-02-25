@@ -7,10 +7,15 @@ export const ROUTE_ABOUT = 'about';
 export const ROUTE_GALLERY = 'gallery';
 export const ROUTE_404 = 'notFound';
 
+export const PATH_HOME = '/';
+export const PATH_ABOUT = '/about';
+export const PATH_GALLERY = '/gallery';
+export const PATH_404 = 'notFound';
+
 export const routes = [
-  { name: ROUTE_HOME, path: '/' },
-  { name: ROUTE_ABOUT, path: '/about' },
-  { name: ROUTE_HOME, path: '/gallery' },
+  { name: ROUTE_HOME, path: PATH_HOME },
+  { name: ROUTE_ABOUT, path: PATH_ABOUT },
+  { name: ROUTE_GALLERY, path: PATH_GALLERY },
 ];
 
 export const matchRoute = (theRoutes, url) => {
